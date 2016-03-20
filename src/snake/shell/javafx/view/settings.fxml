@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snake.shell.javafx.controller.SettingsController">
+   <children>
+      <Label layoutX="31.0" layoutY="22.0" text="Grid Size" />
+      <ColorPicker fx:id="backgroundColor" layoutX="194.0" layoutY="147.0" prefHeight="25.0" prefWidth="111.0" />
+      <TextField fx:id="gridSizeX" layoutX="29.0" layoutY="40.0" prefHeight="25.0" prefWidth="47.0" promptText="X" />
+      <TextField fx:id="gridSizeY" layoutX="84.0" layoutY="40.0" prefHeight="25.0" prefWidth="47.0" promptText="Y" />
+      <Separator layoutX="171.0" layoutY="33.0" orientation="VERTICAL" prefHeight="254.0" prefWidth="0.0" />
+      <CheckBox fx:id="infinitySpace" layoutX="32.0" layoutY="265.0" mnemonicParsing="false" text="Infinity Space" />
+      <CheckBox fx:id="selfEating" layoutX="32.0" layoutY="240.0" mnemonicParsing="false" text="Self Eating" />
+      <Label layoutX="29.0" layoutY="182.0" text="Start Snake Direction" />
+      <Label layoutX="29.0" layoutY="76.0" text="Start Snake Length" />
+      <TextField fx:id="startSnakeLength" layoutX="30.0" layoutY="93.0" prefHeight="25.0" prefWidth="47.0" />
+      <Label layoutX="31.0" layoutY="130.0" text="Start Snake Position" />
+      <ComboBox fx:id="startSnakePositionX" layoutX="30.0" layoutY="147.0" prefHeight="25.0" prefWidth="34.0" />
+      <ComboBox fx:id="startSnakePositionY" layoutX="88.0" layoutY="148.0" prefHeight="25.0" prefWidth="47.0" />
+      <Label layoutX="192.0" layoutY="22.0" text="Speed" />
+      <ComboBox fx:id="speed" layoutX="192.0" layoutY="40.0" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="195.0" layoutY="76.0" text="Squares Size" />
+      <TextField fx:id="squaresSize" layoutX="192.0" layoutY="93.0" prefHeight="25.0" prefWidth="47.0" text="2" />
+      <Label layoutX="193.0" layoutY="130.0" text="Colors:" />
+      <Label layoutX="314.0" layoutY="151.0" text="Background" />
+      <ColorPicker fx:id="gridLinesColor" layoutX="194.0" layoutY="178.0" prefHeight="25.0" prefWidth="111.0" />
+      <ColorPicker fx:id="snakeColor" layoutX="194.0" layoutY="212.0" prefHeight="25.0" prefWidth="111.0" />
+      <ColorPicker fx:id="appleColor" layoutX="194.0" layoutY="245.0" prefHeight="25.0" prefWidth="111.0" />
+      <Label layoutX="314.0" layoutY="182.0" text="Grid Lines" />
+      <Label layoutX="314.0" layoutY="216.0" text="Snake" />
+      <Label layoutX="314.0" layoutY="249.0" text="Apple" />
+      <Button layoutX="294.0" layoutY="306.0" mnemonicParsing="false" onAction="#saveButtonHandler" text="Save &amp; Reload" />
+      <Button layoutX="224.0" layoutY="306.0" mnemonicParsing="false" onAction="#cancelButtonHandler" text="Cancel" />
+      <ComboBox fx:id="startSnakeDirection" layoutX="30.0" layoutY="200.0" prefHeight="25.0" prefWidth="111.0" />
+   </children>
+</AnchorPane>
