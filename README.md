@@ -9,35 +9,50 @@ src/snake/shell/swing/Launcher.java
 
 <h1>How to use</h1>
 <h5>Snake Game Settigns:</h5>
-```sh
+```
 // the same as the constructor
-snakeGame.setGridSize(int, int);
+setGridSize(int, int);
 
 // default snake settings
-snakeGame.setStartSnakeLength(int);
-snakeGame.setStartSnakePosition(int, int);
-snakeGame.setStartSnakeDirection(Direction);
+setStartSnakeLength(int);
+setStartSnakePosition(int, int);
+setStartSnakeDirection(Direction);
 
 // game options
-snakeGame.setSelfEating(boolean);
-snakeGame.setInfinitySpace(boolean);
+setSelfEating(boolean);
+setInfinitySpace(boolean);
 ```
 <h5>Snake Game Control:</h5>
-```sh
+```
 // game control
-snakeGame.start();
-snakeGame.doMove(Direction);
-snakeGame.restart();
+start();
+doMove(Direction);
+restart();
 
 // game output
-snakeGame.getSnake();
-snakeGame.getApple();
-snakeGame.getScore();
+getSnake();
+getApple();
+getScore();
+```
+<h5>Sell:</h5>
+```
+// settings
+setSpeed(int); // from 1 to 10
+setSquareSize(int);
+
+// Colors
+setBackgroundColor(int, int, int);
+setGridLinesColor(int, int, int);
+setSnakeColor(int, int, int);
+setAppleColor(int, int, int);
+
+// Control
+start();
 ```
 
 <h1>How to create your own game:</h1>
 To write your own graphic shell, you must implement abstract methods below. Other methods for game control is complete. And of course you can add your own methods or rewrite existing ones. They were developed to make this process easier.
-```sh
+```
 // your main job
 protected abstract void drawWindow();
 protected abstract void drawBackground();
