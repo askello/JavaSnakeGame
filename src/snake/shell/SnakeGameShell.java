@@ -129,15 +129,14 @@ public abstract class SnakeGameShell {
             loadFromProperties();
         }
         catch (Exception e) {
-            System.err.print("Properties load error! Game is loaded using default settings.");
+            System.err.print("Properties load error! Shell is loaded using default settings.\n");
             setDefaultSettings();
         }
     }
 
     private void loadFromProperties() throws Exception {
         Properties prop = new Properties();
-        InputStream is = new FileInputStream(new File("src/snake/shell/settings.properties"));
-        //InputStream is = SnakeGameShell.class.getResourceAsStream("settings.properties");
+        InputStream is = new FileInputStream(System.getProperty("user.dir") + "\\settings\\shell.properties");
 
         prop.load(is);
 

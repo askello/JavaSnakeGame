@@ -6,8 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import snake.shell.SnakeGameShell;
 import snake.shell.javafx.Launcher;
+import snake.game.SnakeGame;
 
 import java.io.*;
 import java.util.Properties;
@@ -85,22 +85,25 @@ public class SettingsController {
 
     private void loadGameProperties() {
         try {
-            InputStream in = new FileInputStream("src/snake/game/settings.properties");
+            //InputStream in = new FileInputStream("src/snake/game/settings.properties");
+            //InputStream in = SnakeGame.class.getResourceAsStream("settings.properties");
+            InputStream in = new FileInputStream(System.getProperty("user.dir") + "\\settings\\game.properties");
             gameProperties.load(in);
 
             // Grid Size TextFields
             gridSizeX.setText(gameProperties.getProperty("GridSizeX"));
             gridSizeY.setText(gameProperties.getProperty("GridSizeY"));
 
+
             // Start Snake Length TextField
             startSnakeLength.setText(gameProperties.getProperty("StartSnakeLength"));
 
             // Start Snake Position ComboBoxes
-            for(int i=0; i<=Integer.parseInt(gridSizeX.getText()); i++)
+            for(int i=0; i<=Integer.parseInt(gameProperties.getProperty("GridSizeX")); i++)
                 startSnakePositionX.getItems().add(i);
             startSnakePositionX.getSelectionModel().select(gameProperties.getProperty("StartSnakePositionX"));
 
-            for(int i=0; i<=Integer.parseInt(gridSizeY.getText()); i++)
+            for(int i=0; i<=Integer.parseInt(gameProperties.getProperty("GridSizeY")); i++)
                 startSnakePositionY.getItems().add(i);
             startSnakePositionY.getSelectionModel().select(gameProperties.getProperty("StartSnakePositionY"));
 
@@ -123,7 +126,9 @@ public class SettingsController {
 
     private void loadGraphicProperties() {
         try {
-            InputStream in = new FileInputStream("src/snake/shell/settings.properties");
+            //InputStream in = SnakeGameShell.class.getResourceAsStream("settings.properties");
+            //InputStream in = new FileInputStream(System.getProperty("user.dir") + "\\settings.properties");
+            InputStream in = new FileInputStream(System.getProperty("user.dir") + "\\settings\\shell.properties");
             graphicProperties.load(in);
 
             // Speed
@@ -148,7 +153,8 @@ public class SettingsController {
         OutputStream output = null;
 
         try {
-            output = new FileOutputStream("src/snake/game/settings.properties");
+            //output = new FileOutputStream("src/snake/game/settings.properties");
+            output = new FileOutputStream(System.getProperty("user.dir") + "\\settings\\game.properties");
 
             // set the properties value
             gameProperties.setProperty("GridSizeX", gridSizeX.getText());
@@ -182,7 +188,8 @@ public class SettingsController {
         OutputStream output = null;
 
         try {
-            output = new FileOutputStream("src/snake/shell/settings.properties");
+            //output = new FileOutputStream("src/snake/shell/settings.properties");
+            output = new FileOutputStream(System.getProperty("user.dir") + "\\settings\\shell.properties");
 
             // set the properties value
             graphicProperties.setProperty("Speed", String.valueOf(speed.getValue()));

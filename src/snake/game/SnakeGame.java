@@ -235,7 +235,7 @@ public class SnakeGame {
             loadFromProperties();
         }
         catch (Exception e) {
-            System.err.print("Properties load error! Game is loaded using default settings.");
+            System.err.print("Properties load error! Game is loaded using default settings.\n");
             setDefaultSettings();
         }
     }
@@ -245,8 +245,7 @@ public class SnakeGame {
      */
     private void loadFromProperties() throws Exception {
         Properties prop = new Properties();
-        InputStream is = new FileInputStream(new File("src/snake/game/settings.properties"));
-        //InputStream is = SnakeGame.class.getResourceAsStream("settings.properties");
+        InputStream is = new FileInputStream(System.getProperty("user.dir") + "\\settings\\game.properties");
 
         prop.load(is);
 
@@ -282,7 +281,7 @@ public class SnakeGame {
         startSnakeDirection = Direction.RIGHT;
 
         selfEating = false;
-        infinitySpace = false;
+        infinitySpace = true;
     }
 
 }

@@ -21,14 +21,14 @@
       <CheckBox fx:id="selfEating" layoutX="32.0" layoutY="240.0" mnemonicParsing="false" text="Self Eating" />
       <Label layoutX="29.0" layoutY="182.0" text="Start Snake Direction" />
       <Label layoutX="29.0" layoutY="76.0" text="Start Snake Length" />
-      <TextField fx:id="startSnakeLength" layoutX="30.0" layoutY="93.0" prefHeight="25.0" prefWidth="47.0" />
+      <TextField fx:id="startSnakeLength" layoutX="30.0" layoutY="93.0" prefHeight="25.0" prefWidth="47.0" promptText="0" />
       <Label layoutX="31.0" layoutY="130.0" text="Start Snake Position" />
       <ComboBox fx:id="startSnakePositionX" layoutX="30.0" layoutY="147.0" prefHeight="25.0" prefWidth="34.0" />
       <ComboBox fx:id="startSnakePositionY" layoutX="88.0" layoutY="148.0" prefHeight="25.0" prefWidth="47.0" />
       <Label layoutX="192.0" layoutY="22.0" text="Speed" />
       <ComboBox fx:id="speed" layoutX="192.0" layoutY="40.0" prefHeight="25.0" prefWidth="84.0" />
       <Label layoutX="195.0" layoutY="76.0" text="Squares Size" />
-      <TextField fx:id="squaresSize" layoutX="192.0" layoutY="93.0" prefHeight="25.0" prefWidth="47.0" text="2" />
+      <TextField fx:id="squaresSize" layoutX="192.0" layoutY="93.0" prefHeight="25.0" prefWidth="47.0" promptText="0" />
       <Label layoutX="193.0" layoutY="130.0" text="Colors:" />
       <Label layoutX="314.0" layoutY="151.0" text="Background" />
       <ColorPicker fx:id="gridLinesColor" layoutX="194.0" layoutY="178.0" prefHeight="25.0" prefWidth="111.0" />
