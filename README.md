@@ -1,16 +1,20 @@
-<h1>Introducing</h1>
+## Introducing
 Java Snake Game is the most popular project for java beginers. My goal was to create java snake game, which can be launched on different platforms, for example swing, javafx, android and so on. Now, I have done the game, abstract class for connecting this game for graphic shells and of course two graphic shells (for Swing and JavaFX), which appear the game.
 
-<h1>Launch the game</h1>
+## Launch the game
 You can use native launchers for your OS ("native-apps" folder), or you can launch the game in your IDE by running main methods in files below:
-<h5>JavaFX:</h5>
-src/snake/shell/javafx/Launcher.java
-<h5>Swing:</h5>
-src/snake/shell/swing/Launcher.java
-
-<h1>How to use</h1>
-<h5>Snake Game Settigns:</h5>
+#### JavaFX:
 ```
+src/snake/shell/javafx/Launcher.java
+```
+#### Swing:
+```
+src/snake/shell/swing/Launcher.java
+```
+
+## How to use
+#### Snake Game Settigns:
+```java
 // the same as the constructor
 setGridSize(int, int);
 
@@ -23,8 +27,8 @@ setStartSnakeDirection(Direction);
 setSelfEating(boolean);
 setInfinitySpace(boolean);
 ```
-<h5>Snake Game Control:</h5>
-```
+#### Snake Game Control:
+```java
 // game control
 start();
 doMove(Direction);
@@ -35,8 +39,8 @@ getSnake();
 getApple();
 getScore();
 ```
-<h5>Sell:</h5>
-```
+#### Sell:
+```java
 // settings
 setSpeed(int); // from 1 to 10
 setSquareSize(int);
@@ -51,9 +55,9 @@ setAppleColor(int, int, int);
 start();
 ```
 
-<h1>How to create your own game:</h1>
+## How to create your own game:
 To write your own graphic shell, you must implement abstract methods below. Other methods for game control is complete. And of course you can add your own methods or rewrite existing ones. They were developed to make this process easier.
-```
+```java
 // your main job
 protected abstract void drawWindow();
 protected abstract void drawBackground();
